@@ -2,11 +2,11 @@
 
 ## What is this ?
 
-Small utility to send out the temperature of your Raspberry Pi (running Raspbian) to an external URL. It also posts the host name in case you are monitoring a swarm or something cool like that. And yes I do work my Pi's hard and install fans and stuff like that, especially for my commercial products.
+Small utility to send out the temperature of your Raspberry Pi (running Raspbian) to an external URL. It also posts the host name in case you are monitoring a swarm or something cool like that.
 
 ## Why ?
 
-I've always found myself wanting to monitor my Raspberry Pi's temperature remotely. So I'd just run one of these containers in each and presto. Don't have to bother coding.
+I've always found myself wanting to monitor my Raspberry Pi's temperature remotely. So I'd just run one of these containers in each and presto. Don't have to bother coding. And yes I do work my Pi's hard and install fans and stuff like that, especially for my commercial products. Hppefully it will be of you to you too!
 
 ## How do I run it?
 
