@@ -10,8 +10,19 @@ I've always found myself wanting to monitor my Raspberry Pi's temperature remote
 
 ## How do I run it?
 
-To run, install docker and type
+Install docker. Check out the documentation in here > https://docs.docker.com/engine/install/debian/
 
+To run the version over at Docker hub which is "stable" and I maintain, type
+
+```
+docker run -d -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_SECONDS=10 -e POST_URL="http://docker-raspbian.jangita.com/temp" raspbian-temp-post
+```
+
+To run the version from this repo - which is bleeding edge and may break, but has the latest and greatest features, first build from this Github repo then run like so: 
+```
+docker build -t raspbian-temp-post https://github.com/jangita/docker-rasbian-temp.git
+```
+then
 ```
 docker run -d -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_SECONDS=10 -e POST_URL="http://docker-raspbian.jangita.com/temp" raspbian-temp-post
 ```

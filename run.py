@@ -16,7 +16,7 @@ while True:
         hostname = f.read().decode().strip()
         f.close()
         
-    json_data = { 'temp': temp, 'hostname': hostname }
+    json_data = { 'temp': temp, 'host': hostname }
     print(datetime.datetime.now().isoformat(),': ','POSTing ', json_data, ' to ',POST_URL,' ...')
     x = requests.post(POST_URL, json = json_data)
     print(datetime.datetime.now().isoformat(),': ',x)
