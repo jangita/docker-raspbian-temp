@@ -18,7 +18,7 @@ docker run -d --name raspbian-temp -v /sys/class/thermal/thermal_zone0/temp:/app
 
 ## Can I configure which URL it POSTs to and how often it POSTs ?
 
-Yes! Just  change the environment variables POST_URL and POST_SECONDS which in the above commands points to my test server and 10 seconds. This is how often the temperature is checked and posted and which URL the details are posted to.
+Yes! Just change the environment variables POST_URL and POST_SECONDS which in the above commands points to my test server and 10 seconds. This is how often the temperature is checked and posted and which URL the details are posted to. You can also set them in your docker_compose.yml file and so on.
 
 ## What format does it POST in?
 
