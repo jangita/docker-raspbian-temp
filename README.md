@@ -13,19 +13,19 @@ I've always found myself wanting to monitor my Raspberry Pi's temperature remote
 To run, install docker and type
 
 ```
-docker run -d --name raspbian-temp -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_INTERVAL=10 -e POST_URL="http://docker-raspbian.jangita.com/temp" raspbian-temp
+docker run -d --name raspbian-temp -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_SECONDS=10 -e POST_URL="http://docker-raspbian.jangita.com/temp" raspbian-temp-post
 ```
 
 ## Can I configure which URL it POSTs to and how often it POSTs ?
 
-Yes! Just  change the environment variables POST_URL and POST_INTERVAL which in the above commands points to my test server and 10 seconds. This is how often the temperature is checked and posted and which URL the details are posted to.
+Yes! Just  change the environment variables POST_URL and POST_SECONDS which in the above commands points to my test server and 10 seconds. This is how often the temperature is checked and posted and which URL the details are posted to.
 
 ## What format does it POST in?
 
 The information is posted as JSON on the HTTP body like so
 ```
     {
-        "host": "myraspberry
+        "host": "myraspberry"
         "temp": 338459
     }
 ```
@@ -33,6 +33,8 @@ The information is posted as JSON on the HTTP body like so
 The temperature is in millidegrees C (millionth of a degree Celcius)  so divide by 1000 to give you degrees C and do the nessesary to convert to degrees F or Kelvin if you are feeling scientific 😎
 
 ## Contributing
+
+Buy me a coffee ☕ https://paypal.me/exoscale?locale.x=en_US
 
 As always, all contributions of whatever nature are welcome. Just
 
