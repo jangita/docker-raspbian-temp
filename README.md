@@ -15,16 +15,16 @@ Install docker. Check out the documentation here > https://docs.docker.com/engin
 To run the version over at Docker hub which is "stable" and I maintain, type
 
 ```
-docker run -d -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_SECONDS=10 -e POST_URL="http://docker-raspbian.jangita.com/temp" jangita/raspbian-temp-post:latest
+docker run -d -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_SECONDS=10 -e POST_URL="http://docker-raspbian.jangita.io/temp" jangita/raspbian-temp-post:latest
 ```
 
 To run the version from this repo which is bleeding edge and may break, but has the latest and greatest features, first build from this Github repo then run: 
 ```
-docker build -t raspbian-temp-post https://github.com/jangita/docker-rasbian-temp.git
+docker build -t raspbian-temp-post https://github.com/jangita/docker-raspbian-temp.git
 ```
 when that is done, run 
 ```
-docker run -d -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_SECONDS=10 -e POST_URL="http://docker-raspbian.jangita.com/temp" raspbian-temp-post
+docker run -d -v /sys/class/thermal/thermal_zone0/temp:/app/temp -v /etc/hostname:/app/hostname  -e POST_SECONDS=10 -e POST_URL="http://docker-raspbian.jangita.io/temp" raspbian-temp-post
 ```
 and it should be up and running.
 
