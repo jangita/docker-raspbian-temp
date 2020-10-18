@@ -4,7 +4,7 @@
 
 Small utility to send out the temperature of your Raspberry Pi (running Raspbian) to an external URL. It also posts the host name in case you are monitoring a Raspberry Pi swarm or something cool like that.
 
-There is an example Docker server that can receive this information here https://github.com/jangita/docker-raspbian-temp-server
+There is an example express-nodejs-Docker server that can receive this information here https://github.com/jangita/docker-raspbian-temp-server
 
 ## Why ?
 
