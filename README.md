@@ -8,7 +8,7 @@ There is an example express-nodejs-Docker server that can receive this informati
 
 ## Why ?
 
-I've always found myself wanting to monitor my Raspberry Pi's temperature remotely. So I'd just run one of these containers in each and presto. Don't have to bother coding. And yes I do work my Pi's hard and install fans and stuff like that, especially for my commercial products. Hppefully it will be of use to you too!
+I've always found myself wanting to monitor my Raspberry Pi's temperature remotely. So I'd just run one of these containers in each and presto. Don't have to bother coding. And yes I do work my Pi's hard and install fans and stuff like that, especially for my commercial products. Hopefully it will be of use to you too!
 
 ## How do I run it?
 
